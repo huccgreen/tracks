@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Text, input, Button, Input } from 'react-native-elements';
+import { Text, Button, Input } from 'react-native-elements';
 
 const SignupScreen = ({ navigation }) => {
 
@@ -8,7 +8,7 @@ const SignupScreen = ({ navigation }) => {
     const [Password, setPassword] = useState('');
 
     return (<View style={styles.container}>
-        <Text h1> Sign up for tracker  </Text>
+        <Text h1 style={styles.head}> Sign up for tracker  </Text>
         <Input
             label='Email'
             autoCorrect={false}
@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
         paddingBottom: 300,
         paddingTop: 100
 
-    }
+    },
+    head: { marginBottom: 55 }
 });
 
 export default SignupScreen;
